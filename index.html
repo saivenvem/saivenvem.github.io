@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blog - Sai Venkatesh</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        function Home() {
+            document.getElementById("home_tab").style.display = "inline";
+            document.getElementById("aboutme_tab").style.display = "none";
+            document.getElementById("contactme_tab").style.display = "none";
+            document.getElementById("gallery_tab").style.display = "none";
+            activeTab("home_nav");
+        }
+
+        function AboutMe() {
+            document.getElementById("home_tab").style.display = "none";
+            document.getElementById("aboutme_tab").style.display = "inline";
+            document.getElementById("contactme_tab").style.display = "none";
+            document.getElementById("gallery_tab").style.display = "none";
+            activeTab("aboutme_nav");
+        }
+
+        function ContactMe() {
+            document.getElementById("home_tab").style.display = "none";
+            document.getElementById("aboutme_tab").style.display = "none";
+            document.getElementById("contactme_tab").style.display = "inline";
+            document.getElementById("gallery_tab").style.display = "none";
+            activeTab("contactme_nav");
+        }
+
+        function Gallery() {
+            document.getElementById("home_tab").style.display = "none";
+            document.getElementById("aboutme_tab").style.display = "none";
+            document.getElementById("contactme_tab").style.display = "none";
+            document.getElementById("gallery_tab").style.display = "inline";
+            activeTab("gallery_nav");
+        }
+
+        function activeTab(current_tab) {
+            document.getElementById("home_nav").classList.remove("active");
+            document.getElementById("aboutme_nav").classList.remove("active");
+            document.getElementById("contactme_nav").classList.remove("active");
+            document.getElementById("gallery_nav").classList.remove("active");
+            document.getElementById(current_tab).classList.add("active")
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" onclick="Home()" style="cursor:pointer">Sai Venkatesh's Blog</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li id="home_nav" class="active"><a onclick="Home()" style="cursor:pointer">Home</a></li>
+                <li id="aboutme_nav"><a onclick="AboutMe()" style="cursor:pointer">About Me</a></li>
+                <li id="contactme_nav"><a onclick="ContactMe()" style="cursor:pointer">Contact Me</a></li>
+                <li id="gallery_nav"><a onclick="Gallery()" style="cursor:pointer">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="home_tab">
+        <div class="col col-lg-2"></div>
+        <div class="col col-lg-8 text-center">
+            <h2>Welcome to my Blog!</h2>
+            <p>This is a sample blog built as part of HTML & CSS training</p>
+        </div>
+        <div class="col col-lg-2"></div>
+    </div>
+    <div id="aboutme_tab" style="display: none;">
+        <div class="col col-lg-2"></div>
+        <div class="col col-lg-8">
+            <h2 class="text-center">Welcome to my Blog!</h2>
+            <p class="text-center">Hi Everyone! I'm Sai Venkatesh. You can call me Sai (Preferred) , Venkatesh or Venky.
+                I've got little over 4.5 Years of experience covering – ETL & Data Engineering, Full Stack Web and GCP.
+                I'd describe myself as an avid quizzer, amateur food and travel blogger, potter head and an aspiring
+                marathoner.</p>
+            <br>
+            <br>
+            <h3>Recent Reads</h3>
+            <ol>
+                <li>The Doctor and the Saint : The Ambedkar-Gandhi Debate : Caste, Race, and Annihilation of Caste
+                    <br>by <em>Arundhati Roy</em>
+                </li>
+                <li>Good Economics for Hard Times : Better Answers to Our Biggest Problems <br>by <em>Abhijit Banerjee,
+                        Esther Duflo</em></li>
+                <li>The Palace of Illusions<br> by <em>Chitra Banarjee Divakaruni</em></li>
+                <li>Pride and Prejudice <br>by <em>Jane Austen</em></li>
+                <li>The Grand Design <br>by <em>Stephen Hawking</em></li>
+                <li>Midnight's Children<br> by <em>Salman Rushdie</em></li>
+                <li>The Second Machine Age : Work, Progress, and Prosperity in a time of Brilliant Technologies<br> by
+                    <em>Erik Brynjolfsson, Andrew McAfee</em>
+                </li>
+            </ol>
+        </div>
+        <div class="col col-lg-2"></div>
+    </div>
+    <div id="contactme_tab" style="display: none;">
+        <div class="col col-lg-3"></div>
+        <div class="col col-lg-6">
+            <form:form action="" method="post">
+                <div class="form-group">
+                    <label for="InputName">Name</label>
+                    <input type="text" class="form-control" id="InputName" name="InputName" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label for="InputPhone">Phone</label>
+                    <input type="text" class="form-control" id="InputPhone" name="InputPhone" placeholder="Enter Phone">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail">Email address</label>
+                    <input type="email" class="form-control" id="InputEmail" name="InputEmail"
+                        placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                    <label for="InputDetails">Details</label>
+                    <textarea class="form-control" id="InputDetails" name="InputDetails"
+                        placeholder="Provide reason for reaching out."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin:auto;display:block;">Submit</button>
+        </div>
+        </form:form>
+        <div class="col col-lg-3"></div>
+    </div>
+    <div id="gallery_tab" style="display: none;">
+        <div class="col col-lg-6">
+            <img src="./Photo1.jpeg" class="img-thumbnail" alt="Dal Lake Srinagar">
+        </div>
+        <div class="col col-lg-6">
+            <img src="./Photo2.jpeg" class="img-thumbnail" alt="Lush green western ghats in Ooty">
+        </div>
+        <div class="col col-lg-6">
+            <img src="./Photo3.jpeg" class="img-thumbnail" alt="Buddha Statue in Diskit Monastery">
+        </div>
+        <div class="col col-lg-6">
+            <img src="./Photo4.jpeg" class="img-thumbnail" alt="Amer Fort in Jaipur">
+        </div>
+    </div>
+</body>
+
+</html>
