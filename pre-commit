@@ -1,0 +1,10 @@
+echo "Testing Prehook Code"
+FILE=./.idea/sonarlint
+if [ -d "$FILE" ]; then
+    echo "SONARLINT IS ENABLED."
+	sudo mvn verify sonar:sonar -Dsonar.projectKey=test-project -Dsonar.login=<LOGIN_TOKEN> -Dsonar.host.url=http://localhost:9000 -Dsonar.qualitygate.wait=true
+fi
+if [ ! -d "$FILE" ]; then
+    echo "SONARLINT IS NOT ENABLED."
+    exit 1
+fi
